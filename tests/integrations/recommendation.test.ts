@@ -1,10 +1,10 @@
-import { prisma } from "../src/database";
+import { prisma } from "../../src/database";
 import supertest from "supertest";
-import app from "../src/app";
-import recommendationFactory from "./factories/recommendationFactory";
+import app from "../../src/app";
+import recommendationFactory from "../factories/recommendationFactory";
 import { Recommendation } from "@prisma/client";
 
-import { createScenarioRecommendationsWithRandomUpvotes, createScenarioWithOneRecommendation, deleteAllData, disconnectPrisma } from "./factories/scenarioFactory";
+import { createScenarioRecommendationsWithRandomUpvotes, createScenarioWithOneRecommendation, deleteAllData, disconnectPrisma } from "../factories/scenarioFactory";
 import { faker } from "@faker-js/faker";
 
 beforeEach(async () => {
@@ -198,9 +198,6 @@ describe('Testes das rotas de músicas recomendadas', () => {
         });
 
         const result = await server.get(`/recommendations/top/${randomAmount}`);
-
-        console.log(result.body);
-        console.log(topRecommendations);
 
         expect(result.body).toEqual(topRecommendations);
     });
