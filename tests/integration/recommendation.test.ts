@@ -184,8 +184,8 @@ describe('Testes das rotas de músicas recomendadas', () => {
     it.todo('Testa GET /recommendations/random');
 
     it('Testa sucesso GET /recommendations/top/:amount', async () => {
-        const randomAmount = Math.floor(Math.random()*20); //número aleatório entre 0 e 20
-        const randomCreations = Math.floor(Math.random()*20); //número aleatório entre 0 e 20
+        const randomAmount = Math.floor(Math.random()*10); //número aleatório entre 0 e 10
+        const randomCreations = Math.floor(Math.random()*10); //número aleatório entre 0 e 10
 
         for(let i = 0; i < randomCreations; i++) {
             const recommendation = recommendationFactory();
