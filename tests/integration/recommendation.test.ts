@@ -181,7 +181,28 @@ describe('Testes das rotas de músicas recomendadas', () => {
         expect(result.status).toBe(404);
     });
 
-    it.todo('Testa GET /recommendations/random');
+    it('Testa sucesso GET /recommendations/random', async () => {
+        const recommendation = recommendationFactory();
+
+        await createScenarioWithOneRecommendation(recommendation);
+
+        const createdRecommendation = await prisma.recommendation.findUnique({
+            where: {
+                name: recommendation.name
+            },
+        });
+
+        const result = await server.get(`/recommendations/random`);
+
+        expect(result.body).toEqual(createdRecommendation);
+    });
+
+    it('Testa erro de recomendação não encontrada (404) GET /recommendations/random', async () => {
+        //banco está vazio
+        const result = await server.get(`/recommendations/random`);
+
+        expect(result.status).toBe(404);
+    });
 
     it('Testa sucesso GET /recommendations/top/:amount', async () => {
         const randomAmount = Math.floor(Math.random()*10); //número aleatório entre 0 e 10
