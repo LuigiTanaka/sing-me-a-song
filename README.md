@@ -67,6 +67,11 @@ Crie o banco de dados com o prisma
   npx prisma migrate dev
 ```
 
+Rode um dos comandos
+```bash
+  npm start
+```
+
 ## Variáveis de ambiente
 
 Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu arquivo .env
