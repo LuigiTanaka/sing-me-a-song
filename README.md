@@ -111,5 +111,5 @@ Para realizar os testes de unitários rode o comando
 
 ## Autor
 
--   Luigi Tanaka, a student at Driven Education 
+-   Luigi Tanaka, estudante da Driven Education 
 <br/>
