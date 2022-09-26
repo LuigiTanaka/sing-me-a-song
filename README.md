@@ -52,7 +52,7 @@ Clone o projeto
 Vá até a pasta do projeto
 
 ```bash
-  cd sing-me-a-song/
+  cd sing-me-a-song-back/
 ```
 
 Instale as dependências
