@@ -80,7 +80,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 </br>
 
 ## Realizar testes
-Para realizar os testes, será necessário a criação de um novo arquivo .env chamado ".env.test".
+Para realizar os testes, será necessário a criação de um novo arquivo .env chamado ".env.test". Esse arquivo será uma cópia do .env padrão, mas com algumas modificações
 
 ### Modificações .env.test
 
@@ -89,12 +89,14 @@ Para realizar os testes, será necessário a criação de um novo arquivo .env c
 `NODE_ENV = test`
 
 ### Testes de integração
+Para realizar os testes de integração rode o comando
 
 ```bash
   npm run test:integration
 ```
 
 ### Testes unitários
+Para realizar os testes de unitários rode o comando
 
 ```bash
   npm run test:unit
